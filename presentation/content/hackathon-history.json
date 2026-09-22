@@ -1,0 +1,273 @@
+{
+  "source_url": "https://milbird.com/hackathons",
+  "homepage_section_url": "https://milbird.com/#ledger",
+  "inspected_local_date": "2026-09-21",
+  "inspection_method": "Live public browser DOM: selected each of the 19 project tabs and read rendered detail panel; inspected card status and image src attributes; screenshot verified visual layout.",
+  "entries": [
+    {
+      "index": 1,
+      "date": "2026-09-11",
+      "project": "Data & AI Hackathon",
+      "event": "Data & AI Hackathon: Real job. Real AI. Real scale.",
+      "status_as_published": "Attended",
+      "primary_url": "https://luma.com/qisv9xmg",
+      "primary_link_label": "About the event",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/event-data-ai.jpg"
+    },
+    {
+      "index": 2,
+      "date": "2026-08-28",
+      "project": "Read to Play",
+      "event": "Better Days: A Hackathon \u2014 San Francisco",
+      "status_as_published": "1st place",
+      "primary_url": "https://github.com/Patcast/clickhouse_hackathon",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/event-better-days.jpg"
+    },
+    {
+      "index": 3,
+      "date": "2026-08-25",
+      "project": "Enid Certificate Agent",
+      "event": "Frontier Build Night: Self-Improving Agents",
+      "status_as_published": "Experiment",
+      "primary_url": "https://github.com/jymiller/hack-sia",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://www.youtube.com/watch?v=TATwwNfjNfA",
+      "cover_url": "https://milbird.com/ledger/event-sia.jpg"
+    },
+    {
+      "index": 4,
+      "date": "2026-08-19",
+      "project": "Great Questions AI",
+      "event": "Agent Memory Hack Night",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/hack-elastic-mastra",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://youtu.be/mRkD1FRksxg",
+      "cover_url": "https://milbird.com/ledger/great-questions.jpg"
+    },
+    {
+      "index": 5,
+      "date": "2026-08-18",
+      "project": "Podcast Research Agent",
+      "event": "The Agent Harness Workshop",
+      "status_as_published": "2nd place",
+      "primary_url": "https://github.com/jymiller/hack-truefoundry",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/event-agent-harness.jpg"
+    },
+    {
+      "index": 6,
+      "date": "2026-08-15",
+      "project": "Second Reading",
+      "event": "Zero-Human Company Hackathon",
+      "status_as_published": "Experiment",
+      "primary_url": "https://github.com/jymiller/hack-terac",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/event-terac.jpg"
+    },
+    {
+      "index": 7,
+      "date": "2026-08-13",
+      "project": "Enid Mandate Relay",
+      "event": "Persistent Context Sprint \u2014 MongoDB .local Build Fest",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/enid-mandate-relay",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://youtu.be/hqXhRymcpS4",
+      "cover_url": "https://milbird.com/ledger/event-relay.jpg"
+    },
+    {
+      "index": 8,
+      "date": "2026-08-10",
+      "project": "Deal Witness: DataHub",
+      "event": "Build with DataHub: The Agent Hackathon",
+      "status_as_published": "Not submitted for judging",
+      "primary_url": "https://datahub.devpost.com/",
+      "primary_link_label": "About the event",
+      "demo_url": null,
+      "cover_url": null
+    },
+    {
+      "index": 9,
+      "date": "2026-08-07",
+      "project": "Deal Witness",
+      "event": "Snowflake \u00d7 Beta Fund \u2014 Agent & Token Economy",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/deal-witness",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/deal-witness.jpg"
+    },
+    {
+      "index": 10,
+      "date": "2026-08-03",
+      "project": "Asset Watcher",
+      "event": "Memory Meets Motion: Hackathon",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/hack-memory-motion",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://www.youtube.com/watch?v=QRdyvOMdL2g",
+      "cover_url": "https://milbird.com/ledger/asset-watcher.jpg"
+    },
+    {
+      "index": 11,
+      "date": "2026-08-02",
+      "project": "Fog Bridges",
+      "event": "Outside LLMs III \u2014 Music & AI Buildathon",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/outside-llms",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://youtu.be/E147bhNWQyw",
+      "cover_url": "https://milbird.com/ledger/event-fogbridges.jpg"
+    },
+    {
+      "index": 12,
+      "date": "2026-07-30",
+      "project": "Material Witness",
+      "event": "Hack the Video Agent Context Graph",
+      "status_as_published": "Not submitted for judging",
+      "primary_url": "https://github.com/jymiller/hack-video",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/material-witness.jpg"
+    },
+    {
+      "index": 13,
+      "date": "2026-07-26",
+      "project": "Covenant Watch",
+      "event": "CrewAI Studio Hackathon",
+      "status_as_published": "3rd place",
+      "primary_url": "https://github.com/jymiller/covenant-watch",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://www.youtube.com/watch?v=GMZ66d153QY",
+      "cover_url": "https://milbird.com/ledger/covenant-watch.png"
+    },
+    {
+      "index": 14,
+      "date": "2026-07-25",
+      "project": "Deal Memory",
+      "event": "Mind Games AI Hackathon",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/mind-games",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/mind-games.png"
+    },
+    {
+      "index": 15,
+      "date": "2026-07-24",
+      "project": "Covenant Sentinel",
+      "event": "You.com Agentic Hackathon",
+      "status_as_published": "3rd place",
+      "primary_url": "https://github.com/jymiller/hack-you",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/hack-you.png"
+    },
+    {
+      "index": 16,
+      "date": "2026-07-21",
+      "project": "Wet Ink",
+      "event": "Last Mile Agent Hackathon",
+      "status_as_published": "1st place",
+      "primary_url": "https://github.com/jymiller/wet-ink",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/wet-ink.png"
+    },
+    {
+      "index": 17,
+      "date": "2026-07-17",
+      "project": "Cold Open",
+      "event": "Loop Engineering Hackathon",
+      "status_as_published": "Not submitted for judging",
+      "primary_url": "https://github.com/jymiller/cold-open",
+      "primary_link_label": "Explore the project",
+      "demo_url": "https://www.youtube.com/watch?v=RyuWErIZMGw",
+      "cover_url": "https://milbird.com/ledger/cold-open.png"
+    },
+    {
+      "index": 18,
+      "date": "2026-04-04",
+      "project": "Nightbridges",
+      "event": "Who Is the Agent Master?",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/nightbridges",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": "https://milbird.com/ledger/nightbridges.png"
+    },
+    {
+      "index": 19,
+      "date": "2026-02-27",
+      "project": "Timesheet Reconciliation",
+      "event": "Llama Lounge Agentic Hackathon",
+      "status_as_published": "Build",
+      "primary_url": "https://github.com/jymiller/llama-hack",
+      "primary_link_label": "Explore the project",
+      "demo_url": null,
+      "cover_url": null
+    }
+  ],
+  "recorded_podiums_as_published": {
+    "gold": 2,
+    "silver": 1,
+    "bronze": 2
+  },
+  "caveats": [
+    "Portfolio-reported records; organizer results and monetary awards were not independently checked.",
+    "Build and Experiment do not establish submitted, judged, completed or award status.",
+    "Newest listed record is September 11; September 19 Walk the Line and September 21 Cognee are absent. This cannot be labelled a complete current participation history.",
+    "Search index returns a stale earlier homepage with only July entries and old podium totals; use this live snapshot.",
+    "Assets and outbound links were observed in public DOM, not downloaded or followed."
+  ],
+  "design": {
+    "homepage_preview": "A 19-column rack of colored vertical title spines, linked as one unit to /hackathons; no images in the preview rack.",
+    "collection": "Dark shelf with 3D angled project cases, enlarged front-facing active card, flip-for-details, previous/next arrows, count, 19-spine tab rack, and selected detail panel with date, event, status and links.",
+    "typography": [
+      "Instrument Serif",
+      "Plus Jakarta Sans",
+      "Cinzel"
+    ],
+    "images": "17 public cover image URLs below /ledger/; DataHub and Timesheet use CSS cover designs with no image.",
+    "observed_public_bundles": [
+      "https://milbird.com/assets/index-B_MtUZeN.js",
+      "https://milbird.com/assets/index-Dq24uhsy.css"
+    ]
+  },
+  "upcoming_promotions_not_past_participation": [
+    {
+      "event": "Party Multiplayer Build Night",
+      "date": "2026-09-24",
+      "time": "5\u20138 PM PDT",
+      "place": "945 Market St, San Francisco",
+      "url": "https://luma.com/rrd6rmb4",
+      "published_context": "Milbird \u00d7 Maitai; bringing people together"
+    },
+    {
+      "event": "AI Agents for Data Teams",
+      "date": "2026-09-28",
+      "time": "5\u20138 PM PDT",
+      "place": "Menlo Park",
+      "url": "https://luma.com/j79caynh",
+      "details_url": "https://hackathon.milbird.com/",
+      "published_context": "Practical mini-hackathon with Bay Area Snowflake User Group; Free"
+    }
+  ],
+  "embedding_header_check": {
+    "request_url": "https://milbird.com/hackathons",
+    "final_url": "https://milbird.com/hackathons/",
+    "http_status": 200,
+    "response_date": "Tue, 22 Sep 2026 02:36:35 GMT",
+    "x_frame_options": null,
+    "content_security_policy": null,
+    "content_security_policy_report_only": null,
+    "frame_policy_meta_tags": [],
+    "conclusion": "No X-Frame-Options, CSP frame-ancestors, or frame-policy meta block was present in the inspected public response. Actual embedding has not been tested."
+  }
+}

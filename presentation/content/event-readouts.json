@@ -1,0 +1,152 @@
+[
+  {
+    "chapter": "walk-the-line",
+    "label": "Walk the Line",
+    "eyebrow": "03 / SATURDAY’S BUILD",
+    "title": "Walk the Line",
+    "lead": "A concrete build. A reusable readout.",
+    "description": "The Saturday build evolved through a mobile app, field video and GPS-tagged photographs. Its later review exposes lessons for the next loop.",
+    "status": "Reference presentation · session material not ingested",
+    "cover_cards": [
+      [
+        "The answer",
+        "Turn field evidence into a reviewable sign-off."
+      ],
+      [
+        "The presented flow",
+        "Evidence → checks → human decision → record."
+      ],
+      [
+        "The reusable part",
+        "Cover, system, evidence, and live demo—with detail below."
+      ]
+    ],
+    "system": {
+      "title": "Evidence in. A signed number out.",
+      "description": "The reference presentation describes this system. Its claims remain attached to that presentation.",
+      "steps": [
+        "Field evidence",
+        "Checks & reasons",
+        "Human sign-off",
+        "Recorded result"
+      ],
+      "note": "This is a reference overview, not a fresh test of Saturday’s application."
+    },
+    "evidence": {
+      "title": "Show the evidence behind the answer.",
+      "description": "Walk the Line’s “Simulated FiberHood” section separates the example, its evidence, and the limits of the demonstration.",
+      "cards": [
+        [
+          "The example",
+          "A simulated block and field evidence."
+        ],
+        [
+          "The distinction",
+          "Keep measured observations separate from derived results."
+        ],
+        [
+          "The review",
+          "Capture what the user wants to carry forward; the personal reflection interview is underway."
+        ]
+      ],
+      "note": "Original project visuals are reused in this presentation. Walk the Line source ingestion into Cognee remains held."
+    },
+    "demo": {
+      "title": "The original material. The next experiment.",
+      "description": "Explore the original visuals and the field evidence, then turn the lesson into the next build.",
+      "cards": [
+        [
+          "Presentation",
+          "View the original Walk the Line deck.",
+          "https://claude.ai/artifact/7zpNEbGd88rbQGuLsEFFBJ",
+          "Open the reference ↗"
+        ],
+        [
+          "Carry the lesson forward",
+          "Take a real example, define the observable check, and test the full handoff.",
+          "#reflection",
+          "Continue to reflection →"
+        ]
+      ],
+      "note": "Template inspection and reuse are separate from memory ingestion."
+    },
+    "custom_cover": "content/walk-the-line-cover.html",
+    "custom_pages": {
+      "system": "content/walk-the-line-system.html",
+      "evidence": "content/walk-the-line-evidence.html"
+    }
+  },
+  {
+    "chapter": "today",
+    "label": "LIVE DEMO",
+    "eyebrow": "06 / LIVE DEMO · COGNEE · 21 SEPTEMBER 2026",
+    "title": "We built the Brain. Then Focus Owl.",
+    "lead": "One big idea → a focused next action and check.",
+    "description": "A shared Hackathon Brain and a tiny game built by Participant using a saved method.",
+    "status": "Working local Docker demo · public browser edition",
+    "cover_cards": [
+      [
+        "The answer",
+        "Make the learning loop visible through one cumulative Hackathon Brain."
+      ],
+      [
+        "The team",
+        "You direct the Brain, which supports Participant, Sponsor, and Assess Hackathon."
+      ],
+      [
+        "The test",
+        "Can reused knowledge change a decision and shorten the next verified build?"
+      ]
+    ],
+    "system": {
+      "title": "A remembered method becomes a product choice.",
+      "description": "The saved method requires one actor, one problem, one outcome, and an observable check. It shapes every Focus Owl answer.",
+      "steps": [
+        "Enter an oversized pitch",
+        "Apply the saved method",
+        "Return one tiny action",
+        "Check the result"
+      ],
+      "note": "The game uses deterministic rules and a curated saved lesson. The browser edition runs locally in the viewer’s browser; the original runs in an ordinary Docker container."
+    },
+    "evidence": {
+      "title": "What actually works today.",
+      "description": "Participant built and exercised the game; Participant, Sponsor and Assess Hackathon verified their dedicated Hackathon Brain connection.",
+      "cards": [
+        [
+          "Hackathon Brain",
+          "The shared foundation and four role definitions are indexed. Each role retrieved its own definition with the dedicated key."
+        ],
+        [
+          "Focus Owl",
+          "Pizza and pet ideas produce a playful focus response, a topic-specific action, an observable check and a copyable plan."
+        ],
+        [
+          "Observed checks",
+          "Participant checked the local Docker runtime, source provenance, browser interactions and narrow-screen layout."
+        ]
+      ],
+      "note": "These are implementation and preparer checks. Audience feedback and improved future outcomes have not been measured. The game does not make live model or Cognee calls."
+    },
+    "demo": {
+      "title": "Play the thing we built.",
+      "description": "Give Focus Owl an overambitious idea and inspect the smaller plan it returns.",
+      "cards": [
+        [
+          "Public browser edition",
+          "Same deterministic game, available to anyone with this link.",
+          "https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/",
+          "Play Focus Owl ↗"
+        ],
+        [
+          "Local Docker edition",
+          "The running container on John’s presenting laptop.",
+          "http://127.0.0.1:8793/",
+          "Open local Docker demo ↗"
+        ]
+      ],
+      "note": "A saved Brain method informs both versions. Neither version sends pitches to a model or writes them into Cognee."
+    },
+    "custom_cover": "content/today-cover.html"
+  }
+]

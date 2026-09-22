@@ -50,7 +50,7 @@ The project’s Cognee dataset is `hackathon-prep`, in the `hackathon machine` w
 
 The agents run in local Codex tasks. Cognee memory is hosted on Cognee Cloud. The public presentation and browser game are static pages; they do not carry API keys or call the private brain. The game uses deterministic rules and a curated saved method, not a live language model. AWS, Strands, Docker Sandboxes, and Bright Data were discussed but are not part of the delivered demo. An ordinary Docker version of Focus Owl is included.
 
-See [the architecture notes](docs/architecture.md) and [current Focus Owl verification](scope-goblin/focus-owl-verification.json). The `scope-goblin/` source folder and public URL remain for compatibility with the original demo.
+See [the architecture notes](docs/architecture.md), [Focus Owl engine/flow verification](scope-goblin/focus-owl-verification.json), and [latest public navigation verification](scope-goblin/navigation-verification.json). The `scope-goblin/` source folder and public URL remain for compatibility with the original demo.
 
 ## Run the presentation and browser demo locally
 
@@ -69,6 +69,16 @@ python3 -B scope-goblin/build-portable.py
 cp scope-goblin/portable/index.html presentation/scope-goblin/index.html
 ```
 
+## Edit the presentation source
+
+The reusable event content and templates are in [`presentation/content/`](presentation/content/); the renderer is in [`presentation/scripts/`](presentation/scripts/). This public export keeps the static files directly under `presentation/`, so the renderer’s output path is adapted to that layout.
+
+```sh
+python3 presentation/scripts/render-event-readouts.py
+```
+
+The snapshot corresponds to Sites source commit `30d02c230f146afbffc51f5394fdc02568d98242` (v14).
+
 ## Run Focus Owl in Docker
 
 ```sh
@@ -85,11 +95,11 @@ Open [the container edition](http://127.0.0.1:8793/). The container uses only Py
 2. Choose **Find my focus**: “Big wings. Small first flight.”
 3. Show the single dinner-picker action, what “done” looks like, and extras parked for later.
 4. Choose **Keep my focus plan** to reveal the source-linked Markdown plan.
-5. Return to the presentation’s reflection: what should the next loop remember?
+5. Use **Back to presentation** to return to LIVE DEMO, then press Right for the final links. The deck opens the game in the same tab so this round trip works in the in-app browser.
 
 ## Verification and scope
 
-The original Scope Goblin implementation was checked in a local Docker container and browser, including invalid input and a 390px viewport; its original receipts are retained unchanged. The Focus Owl update passed eight Python/browser parity cases, the pizza-to-focus-plan browser flow, and local container checks. See `scope-goblin/focus-owl-verification.json`. These are preparer checks, not independent assessment or a demonstrated improvement in future outcomes.
+The original Scope Goblin implementation was checked in a local Docker container and browser, including invalid input and a 390px viewport; its original receipts are retained unchanged. The Focus Owl update passed eight Python/browser parity cases, the pizza-to-focus-plan browser flow, and local container checks. A subsequent public Site v14 check verified the deck → game → presentation round trip, the focus plan, and arrow navigation after return. See `scope-goblin/focus-owl-verification.json` and `scope-goblin/navigation-verification.json`. These are preparer checks, not independent assessment or a demonstrated improvement in future outcomes.
 
 This repository is the public submission snapshot: runnable demo code, the public presentation, screenshots, and documentation. It excludes API keys, local credential files, private memory corpora, and private interview transcripts. The historical preparation repository remains private. No video recording is included yet.
 

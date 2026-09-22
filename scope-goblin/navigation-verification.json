@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-09-22T03:56:07Z",
+  "public_game_url": "https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/",
+  "presentation_url": "https://milbird-three-layers-sep26.john821249.chatgpt.site/#today",
+  "site_version": 14,
+  "site_source_commit": "30d02c230f146afbffc51f5394fdc02568d98242",
+  "portable_sha256": "b81afecdeaad5d664c9b4a3c9bc322db2efbb9476746a0256baa1b10fde0d449",
+  "checks": {
+    "presentation_button_opens_game_in_same_tab": true,
+    "pizza_example_returns_one_action_and_done_check": true,
+    "park_for_later_visible": true,
+    "keep_plan_reveals_copyable_markdown": true,
+    "back_to_presentation_returns_live_demo": true,
+    "arrow_right_after_return_opens_links_chapter": true
+  },
+  "changes": "Deck play links use same-tab navigation; game header returns to LIVE DEMO. Game reasoning engine unchanged."
+}

@@ -309,7 +309,7 @@ document.querySelectorAll('[data-copy-prompt]').forEach(button => {
   update();
 })();
 
-// The Thinker's captions paraphrase the three findings on Reflection / Review.
+// The Thinker links personal reflection and the public sponsor-learning method.
 (function initializeReflectionThoughts() {
   const slide = document.getElementById('reflection');
   const bubble = slide && slide.querySelector('.reflection-thought');
@@ -321,9 +321,10 @@ document.querySelectorAll('[data-copy-prompt]').forEach(button => {
   const next = document.getElementById('reflection-thought-next');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const thoughts = [
-    ['START SMALL', 'Give it 15 minutes. Then decide whether to keep building.'],
-    ['BUILD TOGETHER', 'The invitation to build together changed the experience.'],
-    ['A LESSON TO TRY', 'Carry the short commitments—and the enjoyment—into the next loop.']
+    ['START SMALL', 'Give it 15 minutes. Then decide whether to keep building.', '#reflection/review', 'From John’s reflection ↓'],
+    ['BUILD TOGETHER', 'The invitation to build together changed the experience.', '#reflection/review', 'From John’s reflection ↓'],
+    ['A LESSON TO TRY', 'Carry the short commitments—and the enjoyment—into the next loop.', '#reflection/review', 'From John’s reflection ↓'],
+    ['LISTEN WHILE WE BUILD', 'Ask what helped while people are still building.', '#reflection/sponsor-findings', 'The sponsor-learning questions ↓']
   ];
   let index = 0;
   let paused = motion.matches;
@@ -336,6 +337,8 @@ document.querySelectorAll('[data-copy-prompt]').forEach(button => {
     index = (index + 1) % thoughts.length;
     label.textContent = thoughts[index][0];
     text.textContent = thoughts[index][1];
+    bubble.querySelector('a').href = thoughts[index][2];
+    bubble.querySelector('a').textContent = thoughts[index][3];
     count.textContent = `${index + 1} / ${thoughts.length}`;
     if (!motion.matches && bubble.animate) bubble.animate([{opacity:0,transform:'translate(-10px,12px) scale(.96)'},{opacity:1,transform:'translate(0,0) scale(1)'}],{duration:500,easing:'ease-out'});
   }

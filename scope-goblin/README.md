@@ -48,3 +48,5 @@ Suggested line: **“We built the Brain, and then our Participant used one of it
 Regenerate with `python3 -B build-portable.py` after changing the local page or curated lesson. The JavaScript engine is in `browser-engine.js`; keep its rules in sync with `app.py`. Eight cases matched all Python response fields except generation timestamps, and the pizza-to-copyable-plan flow passed in Codex. See `portable-verification.json`. Brain owns the Site copy, final-page link and publication.
 
 The source directory, Docker image/container name and `/api/roast` route retain their original names for compatibility. The visible product is Focus Owl. Brain owns updating the public Site and deck; `/scope-goblin/` remains a compatible public path.
+
+The deck opens the browser edition in the same tab. Use **Back to presentation** in the game header to return to LIVE DEMO. The public round trip was verified in Site v14; see `navigation-verification.json`.
