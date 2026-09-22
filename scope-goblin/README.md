@@ -1,52 +1,51 @@
-# Focus Owl (formerly Scope Goblin)
+# Wise Owl — your hackathon advisor
 
-A tiny Participant-built focus coach: one big idea → one small next action, a visible definition of done, and extras to park for later. **Turn a big idea into one small thing you can finish.** The **Keep my focus plan** button reveals a complete Markdown plan, selected for copying. It includes the saved source, role, event, observation time and an explicit unverified-suggestion status.
+**Know what we tried. Choose what to try next.**
 
-**Local URL:** http://127.0.0.1:8793
+Wise Owl starts with a question. Its answer panel is blank until submission and clears when the question changes. The advisor matches the question to a bounded catalog of four saved records, distinguishes evidence from proposals, and suggests when to reuse a lesson or challenge a rule with an observable experiment.
 
-## What actually works
+Local Docker URL: http://127.0.0.1:8793/
 
-The app runs in an ordinary Docker container from the locally cached `python:3.12-alpine` image, with a Python standard-library HTTP server and a single HTML page. Pizza, pet, productivity, pitch/AI and generic ideas map to simple topic rules. Three focus messages depend on broad scope and extra features. This is deterministic code using a curated saved Brain method, not live model reasoning or fresh Cognee retrieval. Docker Sandboxes, AWS and Bright Data are not integrated.
+The public presentation keeps the compatible `/scope-goblin/` URL. Brain owns its copy and publication. The source directory and Docker names also retain their original names for compatibility; the visible product is Wise Owl.
 
-The lesson in `lesson.json` is an exact excerpt from `brain/hackathon-prep/increments/05-looping-lab-prep-dispatch.md`, also found in the saved `prep/cognee-ready/memory/build_eval_plan.json`. It shapes the app's action-plus-check format. Topic selection and jokes are authored rules; no improved-outcome claim follows from using the lesson.
+## Available evidence
 
-No keys, env files or private corpus are copied into the image. The build allowlist contains only the app, page and curated lesson. The container runs as a non-root user with a read-only filesystem, and its port is bound to localhost. Pitches are not logged or stored by the server. Copying a plan remains a user action.
+- **Working together:** John’s approved public reflection about a short trial with Rene and the enjoyment of building together. Personal account; no measured speedup or actual two-hour duration is claimed.
+- **Choosing scope:** an existing curated operating method. No comparative outcome is recorded. A connected end-to-end test may be more useful than automatically making a component smaller.
+- **Claims and evidence:** a curated communication method. Evidence labels and execution claims retain their limits; no outcome improvement is assumed.
+- **Reviewing a result:** the approved public Walk the Line video/photo review. Zero video-confirmed marks and 26 reviewed photos are different units, not an accuracy score. The color mismatch is an unresolved lead, not a proven cause.
 
-## Run
+`lesson.json` contains the curated catalog, source locators, dates, evidence labels, reuse conditions and proposed experiments. No original Walk the Line source or private interview was used, and nothing was ingested into Cognee. An unmatched question gets an explicit missing-evidence response, never a fabricated past project or an automatic scope-reduction recommendation.
 
-From the `scope-goblin/` directory:
+This is saved-record matching, not a live model or full Cognee search. Suggestions and experiments are authored proposals. The wider team can investigate records that are absent from this small catalog.
+
+## Run and build
+
+From this directory:
 
 ```sh
 docker build --pull=false -t looping-lab-scope-goblin:local .
 docker run --rm -d --name looping-lab-scope-goblin --read-only --cap-drop ALL --security-opt no-new-privileges --memory 64m --cpus 0.5 -p 127.0.0.1:8793:8080 looping-lab-scope-goblin:local
 ```
 
-If this named container is already running, use the local URL. To stop this app:
+To stop this local app: `docker stop looping-lab-scope-goblin`.
 
-```sh
-docker stop looping-lab-scope-goblin
-```
+The ordinary Docker container uses a non-root user, a read-only filesystem and localhost binding. It contains only the Python app, HTML and curated catalog. No credentials, provider calls, request logs or persistent question storage are used.
 
-## Thirty-second demonstration
+`POST /api/advise` accepts a `question` string of 5–600 characters. The historical `/api/roast` route and `idea` field remain aliases but return the new advisor response schema. `GET /health` identifies Wise Owl and the four loaded records.
 
-1. Open the local URL and click **Pizza empire**.
-2. Click **Find my focus**. The owl says, “Big wings. Small first flight.” It reduces the idea to one button choosing from three sample dinners.
-3. Point to the observable check and expand the saved-method explanation.
-4. Click **Keep my focus plan** to expose the source-linked Markdown record. Copy it if useful.
+## Portable browser edition
 
-Suggested line: **“We built the Brain, and then our Participant used one of its saved methods to build an owl that helps us choose one thing to finish.”**
+Run `python3 -B build-portable.py` to generate `portable/index.html`, a standalone page with the catalog and JavaScript engine embedded. It makes no backend requests. Keep `browser-engine.js` and `app.py` consistent.
 
-## Verification and limits
+Preserve the header’s **Back to the presentation** link. It returns to the public presentation’s `#today` chapter in the same tab. Brain owns the presentation, deployment, public URL and screenshot updates.
 
-`focus-owl-verification.json` records the latest rename, focus-plan flow and engine parity checks. The older `verification.json` records the original Goblin local HTTP checks, invalid-input handling, exact lesson provenance and browser checks. The pizza and hamster flows and the copyable plan were exercised in Codex. A 390px viewport had no horizontal overflow. These are preparer checks, not audience feedback or independent assessment. No submission, award eligibility, faster future build, live memory query or full hackathon lifecycle is claimed. Walk the Line source and ingestion remain held. No Site/shared files were edited.
+## Verification
 
+Run `python3 -B verify-wise-owl.py` for nine question-routing and Python/browser equivalence cases, invalid inputs, evidence boundaries, JavaScript syntax, standalone output and return-link checks. Node is needed only for this development check, not the container or deployed page.
 
-## Browser edition for the presentation Site
+`wise-owl-verification.json` records the latest browser and Docker checks: blank initial output; no answer when merely selecting an example; four distinct themes; explicit unknown for Bright Data history; clearing stale advice when editing; complete copyable decision plan; and a working return to the presentation. Source review found no unsupported outcome or causal claims.
 
-`portable/index.html` is the complete self-contained browser edition. Copy this file as a page in a static Site; no server API, asset directory, API key or localhost connection is needed. It preserves the local toy's existing cartoon interface, verdict, action, observable check and copyable plan. It is labeled **Browser edition** and makes no container-execution claim. No animation or extra feature was added in this portability pass.
+Older verification files document the preceding Scope Goblin / Focus Owl builds. They are historical receipts and do not establish the current advisor’s behavior or a measured improvement in hackathon outcomes.
 
-Regenerate with `python3 -B build-portable.py` after changing the local page or curated lesson. The JavaScript engine is in `browser-engine.js`; keep its rules in sync with `app.py`. Eight cases matched all Python response fields except generation timestamps, and the pizza-to-copyable-plan flow passed in Codex. See `portable-verification.json`. Brain owns the Site copy, final-page link and publication.
-
-The source directory, Docker image/container name and `/api/roast` route retain their original names for compatibility. The visible product is Focus Owl. Brain owns updating the public Site and deck; `/scope-goblin/` remains a compatible public path.
-
-The deck opens the browser edition in the same tab. Use **Back to presentation** in the game header to return to LIVE DEMO. The public round trip was verified in Site v14; see `navigation-verification.json`.
+`wise-owl-public-verification.json` separately records the published Site v15 browser round trip, including the blank initial answer, qualified collaboration response, copyable decision plan, and return navigation.

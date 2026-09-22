@@ -1,0 +1,32 @@
+{
+  "app": "Wise Owl",
+  "checked_at_utc": "2026-09-22T04:05:22.645099+00:00",
+  "status": "local_browser_and_docker_checks_passed",
+  "portable_sha256": "4e40f95a7892a61175c90c883c5d1c88ddbed8d757e297c35704e5795f04a3ed",
+  "container_id": "36a04c60efdf60e751986a8788d6b4255b5c9614a3fe7acc266903c9cce1a3d9",
+  "routing_and_browser_python_parity_cases": 9,
+  "invalid_function_inputs": 5,
+  "javascript_syntax": "pass",
+  "docker_health": {
+    "ok": true,
+    "app": "Wise Owl",
+    "mode": "Saved lessons + deterministic matching; no live model or Cognee query.",
+    "saved_records": 4
+  },
+  "docker_question_cases": 5,
+  "docker_invalid_inputs": 4,
+  "browser_checks": {
+    "blank_initial_panel": true,
+    "blank_after_preset_before_submit": true,
+    "distinct_themes": 4,
+    "explicit_unknown_for_bright_data_history": true,
+    "editing_clears_old_advice": true,
+    "keep_plan_complete_markdown": true,
+    "back_navigation_public_today": true
+  },
+  "source_audit": "No blocking findings: two-hour target retained; color mismatch not treated as proven cause; 0 video marks and 26 photos not compared as accuracy; proposals and history labeled separately.",
+  "sources": "Only existing curated methods and two Brain-approved public presentation excerpts. No original Walk the Line source reads or ingestion.",
+  "public_publish": "Owned by Brain; this receipt verifies local portable preview and local Docker only.",
+  "memory_writes": 0,
+  "provider_calls": 0
+}

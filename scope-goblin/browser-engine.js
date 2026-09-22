@@ -1,51 +1,37 @@
-/* Browser port of app.py. Curated lesson is supplied by build-portable.py. */
-function browserRoast(raw) {
-  const idea = typeof raw === 'string' ? raw.trim() : '';
-  if (idea.length < 5 || idea.length > 600) throw Error('Give the owl an idea between 5 and 600 characters.');
-  const text = idea.toLowerCase();
-  const broad = /\b(everyone|everything|world|platform|ecosystem|marketplace|universal|all-in-one)\b/.test(text);
-  const extras = [
-    ['accounts', /login|account|sign.?up/], ['payments', /pay|subscription|crypto|blockchain/],
-    ['social features', /social|network|feed|chat/], ['live integrations', /real.?time|live data|integrat/],
-    ['an entire platform', /platform|ecosystem|marketplace|all-in-one/],
-  ].filter(([,pattern])=>pattern.test(text)).map(([name])=>name);
-  let action, check, tiny;
-  if (/pizza|food|dinner|meal|restaurant|snack/.test(text)) {
-    action = 'Build one button that picks dinner from three sample meals and shows one reason for the choice.';
-    check = 'Press the button: one meal and its reason appear. A second press still produces a valid meal.';
-    tiny = 'One button. Three dinners. Zero venture capital.';
-  } else if (/pet|cat|dog|hamster|duck/.test(text)) {
-    action = 'Build one pet card with a Feed button that changes its mood from grumpy to delighted.';
-    check = 'Click Feed once: the mood and face change. Reload: the starting state is clear.';
-    tiny = 'One pet. One snack. A manageable emotional arc.';
-  } else if (/calendar|schedule|productivity|todo|to-do|task/.test(text)) {
-    action = 'Build one screen that takes three example tasks and highlights the single next task.';
-    check = 'Enter three tasks: exactly one is marked next, with a visible reason. Nothing is silently deleted.';
-    tiny = 'One next task. The other 47 tabs can wait.';
-  } else if (/hackathon|idea|pitch|startup|agent|ai\b/.test(text)) {
-    action = 'Build one input-to-verdict screen for a sample pitch, with one next action and a visible source note.';
-    check = 'Submit a sample pitch: a verdict, one next action and its source appear. Label fixed or rule-based output.';
-    tiny = 'One useful verdict. Keep the robot board of directors on paper.';
-  } else {
-    action = 'Build one screen with a sample input, one button and one visible example result for this idea.';
-    check = 'Press the button: the expected example result appears. Label sample data and repeat the check once.';
-    tiny = 'One button that does something. A shockingly good start.';
+/* Browser port of app.py. Only the curated catalog supplied at build time is read. */
+function normalized(value) {
+  return ' ' + (value.toLowerCase().match(/[a-z0-9]+/g) || []).join(' ') + ' ';
+}
+function browserAdvise(raw) {
+  if (typeof raw !== 'string' || raw.trim().length < 5 || raw.trim().length > 600)
+    throw Error('Ask a question between 5 and 600 characters.');
+  const question = raw.trim(), text = normalized(question);
+  let bestScore = 0, selected = null;
+  for (const lesson of CATALOG.lessons) {
+    const score = lesson.terms.reduce((sum, term) => sum + (text.includes(normalized(term)) ? normalized(term).trim().split(' ').length : 0), 0);
+    if (score > bestScore) { bestScore = score; selected = lesson; }
   }
-  let title, line;
-  if (broad || extras.length >= 3) {
-    title = 'Choose one target'; line = 'Big wings. Small first flight.';
-  } else if (extras.length >= 1) {
-    title = 'Park the distractions'; line = 'Those extra features can wait on another branch.';
+  let result;
+  if (selected) {
+    const {terms, ...record} = selected;
+    result = {...record, matched:true,
+      limits:'This is a matching saved record, not a search of the full project history. Reuse conditions, rule challenges and experiments are proposals; they are not recorded outcomes.'};
   } else {
-    title = 'Ready to focus'; line = 'One clear next step. Give it your full attention.';
+    result = {
+      id:null, theme:null, matched:false,
+      title:'No matching saved evidence.', evidence_type:'Unknown in this catalog',
+      lesson:'I do not have a relevant record for this question in the four lessons loaded here.',
+      outcome_status:'No recorded outcome for this question',
+      what_happened:'This catalog cannot establish what you tried, whether it worked or why. Missing evidence here does not mean the experience never happened.',
+      why:'The loaded records cover collaboration, scope, evidence labels and a video/photo review. I cannot infer another project’s history from them.',
+      reuse_when:null, rule_to_challenge:null,
+      experiment:'Identify a project name or event date, then locate its source, run receipt or debrief before choosing a lesson to reuse. This offline page cannot perform that search.',
+      hypothesis:'A relevant record may exist outside this small catalog; that has not been established.',
+      observable_check:'A source identifies the attempted action, the observed result and its date. If it does not explain why, keep the cause unknown.',
+      disconfirming_result:'A plan, credential name or similar-looking project alone does not establish that the action ran or worked.',
+      source:null,
+      limits:'No scope reduction, historical outcome or cause is inferred. Ask about a loaded theme or bring the missing evidence back to the wider Brain workflow.'
+    };
   }
-  return {
-    idea, verdict:title, roast:line, tiny, next_action:action, observable_check:check,
-    park_for_later:extras.length ? extras : ['extra features until the first check passes'],
-    reason:'The saved Brain method says to choose one actor, problem and outcome, then build the smallest slice and check observable behavior.',
-    lesson:LESSON, mode:'deterministic rules + saved Brain method; no live model or memory call',
-    record:{role:'participant',event:'Cognee hackathon — Looping Lab',event_date:'2026-09-21',
-      observed_at:new Date().toISOString(),status:'generated suggestion; user build and outcome unverified',
-      source:LESSON.source,observed_outcome:'local plan generated',supersedes:null}
-  };
+  return {...result, question, mode:CATALOG.mode, generated_at:new Date().toISOString()};
 }

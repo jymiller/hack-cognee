@@ -1,4 +1,4 @@
-"""A tiny deterministic focus coach. No provider calls or credentials."""
+"""Wise Owl: bounded, saved-evidence hackathon advice. No provider calls."""
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import datetime as dt
@@ -7,53 +7,46 @@ import os
 import re
 
 ROOT = Path(__file__).resolve().parent
-LESSON = json.loads((ROOT / 'lesson.json').read_text())
+CATALOG = json.loads((ROOT / 'lesson.json').read_text())
 
 
-def roast(idea):
-    text = idea.lower()
-    broad = bool(re.search(r'\b(everyone|everything|world|platform|ecosystem|marketplace|universal|all-in-one)\b', text))
-    extras = [name for name, pattern in [
-        ('accounts', r'login|account|sign.?up'), ('payments', r'pay|subscription|crypto|blockchain'),
-        ('social features', r'social|network|feed|chat'), ('live integrations', r'real.?time|live data|integrat'),
-        ('an entire platform', r'platform|ecosystem|marketplace|all-in-one'),
-    ] if re.search(pattern, text)]
-    if re.search(r'pizza|food|dinner|meal|restaurant|snack', text):
-        action = 'Build one button that picks dinner from three sample meals and shows one reason for the choice.'
-        check = 'Press the button: one meal and its reason appear. A second press still produces a valid meal.'
-        tiny = 'One button. Three dinners. Zero venture capital.'
-    elif re.search(r'pet|cat|dog|hamster|duck', text):
-        action = 'Build one pet card with a Feed button that changes its mood from grumpy to delighted.'
-        check = 'Click Feed once: the mood and face change. Reload: the starting state is clear.'
-        tiny = 'One pet. One snack. A manageable emotional arc.'
-    elif re.search(r'calendar|schedule|productivity|todo|to-do|task', text):
-        action = 'Build one screen that takes three example tasks and highlights the single next task.'
-        check = 'Enter three tasks: exactly one is marked next, with a visible reason. Nothing is silently deleted.'
-        tiny = 'One next task. The other 47 tabs can wait.'
-    elif re.search(r'hackathon|idea|pitch|startup|agent|ai\b', text):
-        action = 'Build one input-to-verdict screen for a sample pitch, with one next action and a visible source note.'
-        check = 'Submit a sample pitch: a verdict, one next action and its source appear. Label fixed or rule-based output.'
-        tiny = 'One useful verdict. Keep the robot board of directors on paper.'
+def normalized(value):
+    return ' ' + ' '.join(re.findall(r'[a-z0-9]+', value.lower())) + ' '
+
+
+def advise(question):
+    if not isinstance(question, str) or not 5 <= len(question.strip()) <= 600:
+        raise ValueError('Ask a question between 5 and 600 characters.')
+    question = question.strip()
+    text = normalized(question)
+    ranked = []
+    for lesson in CATALOG['lessons']:
+        score = sum(len(normalized(term).split()) for term in lesson['terms']
+                    if normalized(term) in text)
+        ranked.append((score, lesson))
+    score, selected = max(ranked, key=lambda row: row[0])
+    if score:
+        result = {key: value for key, value in selected.items() if key != 'terms'}
+        result.update(matched=True, limits='This is a matching saved record, not a search of the full project history. Reuse conditions, rule challenges and experiments are proposals; they are not recorded outcomes.')
     else:
-        action = 'Build one screen with a sample input, one button and one visible example result for this idea.'
-        check = 'Press the button: the expected example result appears. Label sample data and repeat the check once.'
-        tiny = 'One button that does something. A shockingly good start.'
-    if broad or len(extras) >= 3:
-        title, line = 'Choose one target', 'Big wings. Small first flight.'
-    elif len(extras) >= 1:
-        title, line = 'Park the distractions', 'Those extra features can wait on another branch.'
-    else:
-        title, line = 'Ready to focus', 'One clear next step. Give it your full attention.'
-    return {
-        'idea': idea, 'verdict': title, 'roast': line, 'tiny': tiny, 'next_action': action,
-        'observable_check': check, 'park_for_later': extras or ['extra features until the first check passes'],
-        'reason': 'The saved Brain method says to choose one actor, problem and outcome, then build the smallest slice and check observable behavior.',
-        'lesson': LESSON, 'mode': 'deterministic rules + saved Brain method; no live model or memory call',
-        'record': {'role': 'participant', 'event': 'Cognee hackathon — Looping Lab',
-                   'event_date': '2026-09-21', 'observed_at': dt.datetime.now(dt.timezone.utc).isoformat(),
-                   'status': 'generated suggestion; user build and outcome unverified',
-                   'source': LESSON['source'], 'observed_outcome': 'local plan generated', 'supersedes': None},
-    }
+        result = {
+            'id': None, 'theme': None, 'matched': False,
+            'title': 'No matching saved evidence.', 'evidence_type': 'Unknown in this catalog',
+            'lesson': 'I do not have a relevant record for this question in the four lessons loaded here.',
+            'outcome_status': 'No recorded outcome for this question',
+            'what_happened': 'This catalog cannot establish what you tried, whether it worked or why. Missing evidence here does not mean the experience never happened.',
+            'why': 'The loaded records cover collaboration, scope, evidence labels and a video/photo review. I cannot infer another project’s history from them.',
+            'reuse_when': None, 'rule_to_challenge': None,
+            'experiment': 'Identify a project name or event date, then locate its source, run receipt or debrief before choosing a lesson to reuse. This offline page cannot perform that search.',
+            'hypothesis': 'A relevant record may exist outside this small catalog; that has not been established.',
+            'observable_check': 'A source identifies the attempted action, the observed result and its date. If it does not explain why, keep the cause unknown.',
+            'disconfirming_result': 'A plan, credential name or similar-looking project alone does not establish that the action ran or worked.',
+            'source': None,
+            'limits': 'No scope reduction, historical outcome or cause is inferred. Ask about a loaded theme or bring the missing evidence back to the wider Brain workflow.',
+        }
+    result.update(question=question, mode=CATALOG['mode'],
+                  generated_at=dt.datetime.now(dt.timezone.utc).isoformat())
+    return result
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -69,29 +62,32 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == '/health':
-            self.respond(200, {'ok': True, 'app': 'Focus Owl', 'mode': 'local deterministic demo'})
+            self.respond(200, {'ok': True, 'app': 'Wise Owl', 'mode': CATALOG['mode'],
+                               'saved_records': len(CATALOG['lessons'])})
         elif self.path in ('/', '/index.html'):
             self.respond(200, (ROOT / 'index.html').read_bytes(), 'text/html; charset=utf-8')
         else:
             self.respond(404, {'error': 'Not found'})
 
     def do_POST(self):
-        if self.path != '/api/roast':
+        if self.path not in ('/api/advise', '/api/roast'):
             return self.respond(404, {'error': 'Not found'})
         try:
             length = int(self.headers.get('Content-Length', 0))
             if not 0 < length <= 8192:
-                return self.respond(413, {'error': 'Start with a short idea: keep it under 600 characters.'})
+                return self.respond(413, {'error': 'Keep the question under 600 characters.'})
             payload = json.loads(self.rfile.read(length))
-            idea = payload.get('idea') if isinstance(payload, dict) else None
-            if not isinstance(idea, str) or not 5 <= len(idea.strip()) <= 600:
-                return self.respond(400, {'error': 'Give the owl an idea between 5 and 600 characters.'})
-            self.respond(200, roast(idea.strip()))
+            question = payload.get('question', payload.get('idea')) if isinstance(payload, dict) else None
+            try:
+                result = advise(question)
+            except ValueError as exc:
+                return self.respond(400, {'error': str(exc)})
+            self.respond(200, result)
         except (ValueError, UnicodeError):
-            self.respond(400, {'error': 'The owl needs a valid idea.'})
+            self.respond(400, {'error': 'Send a valid question.'})
 
     def log_message(self, format, *args):
-        pass  # Do not retain user pitches or requests.
+        pass  # Do not retain questions or requests.
 
 
 if __name__ == '__main__':

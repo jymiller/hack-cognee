@@ -1,25 +1,25 @@
-"""Produce one self-contained static page; no network or backend required."""
+"""Build one standalone Wise Owl page with the curated catalog embedded."""
 from pathlib import Path
 import json
+import re
 
 ROOT = Path(__file__).resolve().parent
 html = (ROOT / 'index.html').read_text()
-lesson = json.loads((ROOT / 'lesson.json').read_text())
-engine = 'const LESSON = ' + json.dumps(lesson, ensure_ascii=False).replace('<', '\\u003c') + ';\n'
+catalog = json.loads((ROOT / 'lesson.json').read_text())
+engine = 'const CATALOG = ' + json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c') + ';\n'
 engine += (ROOT / 'browser-engine.js').read_text()
-old = "const response=await fetch('/api/roast',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({idea:$('idea').value})});const data=await response.json();if(!response.ok)throw Error(data.error||'The owl needs a moment.');"
-assert html.count(old) == 1, 'Local request handler changed; review browser port before building.'
-html = html.replace(old, "const data=browserRoast($('idea').value);")
+pattern = r'async function getAdvice\(question\)\{.*?\n\}'
+html, count = re.subn(pattern, 'async function getAdvice(question){return browserAdvise(question);}', html, count=1, flags=re.S)
+assert count == 1, 'Review changed request handler before building.'
 html = html.replace('<script>\n', '<script>\n' + engine + '\n', 1)
-html = html.replace('LOCAL DOCKER DEMO', 'BROWSER EDITION')
-html = html.replace('Pitches stay in this local session. No account. No provider call.',
-                    'Pitches stay in this browser. No account. No provider call.')
-html = html.replace('Ordinary Docker container · no Docker Sandboxes claim',
-                    'Browser edition · saved Brain method · no server required')
-html = html.replace('<title>Focus Owl —', '<title>Focus Owl · Browser edition —')
-assert "fetch(" not in html
-assert 'http://127.0.0.1' not in html
-target = ROOT / 'portable'
-target.mkdir(exist_ok=True)
-(target / 'index.html').write_text(html)
-print(target / 'index.html')
+html = html.replace('LOCAL DOCKER DEMO', 'SAVED LESSONS · BROWSER')
+html = html.replace('Questions stay in this local session.', 'Questions stay in this browser.')
+html = html.replace('Ordinary Docker container · saved lessons', 'Browser edition · saved lessons · no server required')
+html = html.replace('<title>Wise Owl —', '<title>Wise Owl · Browser edition —')
+assert 'fetch(' not in html and 'http://127.0.0.1' not in html
+assert '← Back to the presentation' in html
+assert 'ONE THING AT A TIME' not in html
+assert '<div id="result" hidden>' in html
+(ROOT / 'portable').mkdir(exist_ok=True)
+(ROOT / 'portable/index.html').write_text(html)
+print(ROOT / 'portable/index.html')

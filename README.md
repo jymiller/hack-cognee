@@ -7,7 +7,7 @@ The Looping Lab is a human-led hackathon learning system: **ideation → build �
 Built for **Battle of the Personal Brains**, September 21, 2026.
 
 - **[Open the presentation](https://milbird-three-layers-sep26.john821249.chatgpt.site/#story)** — Left/Right advances the story; Down opens the evidence and detail.
-- **[Try Focus Owl](https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/)** — turn an overambitious pitch into a small, checkable next step.
+- **[Ask Wise Owl](https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/)** — your hackathon advisor: know what we tried; choose what to try next.
 - **[Explore Milbird’s hackathon history](https://milbird.com/hackathons/)** — the broader series of projects and experiments.
 
 ## What we built
@@ -16,7 +16,9 @@ A shared Cognee brain carries hackathon methods and selected project context int
 
 The presentation tells the learning loop visually: the lab, the team around a round table, the previous Walk the Line build, reflection, the live demo, and the next event. Details and evidence sit below each chapter.
 
-**Focus Owl** is the small working artifact built by the Participant. **Turn a big idea into one small thing you can finish.** It uses a saved Brain method—build the smallest runnable slice and check observable behavior—to turn a pitch into one small next action, a visible definition of done, and extras to park for later. It can reveal a copyable plan containing its source and verification status.
+**Wise Owl — your hackathon advisor** is the working artifact built by the Participant. **Know what we tried. Choose what to try next.** It starts with a blank answer panel and a question. After you choose **Ask Wise Owl**, it matches the question to one of four source-qualified saved records, explains what is known, and suggests when to reuse a lesson or challenge a rule with an observable experiment. Editing the question clears the previous answer.
+
+The catalog covers working together, choosing scope, claims and evidence, and reviewing a result. It distinguishes personal accounts and reported outcomes from operating methods and authored proposals. A question outside the catalog gets an explicit missing-evidence response. The entire hackathon history is not loaded.
 
 ## Screenshots
 
@@ -40,7 +42,7 @@ flowchart LR
     Brain <--> Sponsor[Sponsor]
     Brain <--> Assessment[Assess Hackathon]
     Brain <--> Next[Join New Hackathon]
-    Participant --> Owl[Focus Owl]
+    Participant --> Owl[Wise Owl advisor]
     Assessment --> Lessons[Proposed lessons with evidence]
     Lessons --> Brain
     Brain --> Deck[Visual presentation]
@@ -48,9 +50,9 @@ flowchart LR
 
 The project’s Cognee dataset is `hackathon-prep`, in the `hackathon machine` workspace. Role-specific node sets organize shared, participant, sponsor, and assessment context. They are retrieval filters, not separate security boundaries. Memory is selected and reviewed before ingestion; the previous Walk the Line corpus has not been ingested.
 
-The agents run in local Codex tasks. Cognee memory is hosted on Cognee Cloud. The public presentation and browser game are static pages; they do not carry API keys or call the private brain. The game uses deterministic rules and a curated saved method, not a live language model. AWS, Strands, Docker Sandboxes, and Bright Data were discussed but are not part of the delivered demo. An ordinary Docker version of Focus Owl is included.
+The agents run in local Codex tasks. Cognee memory is hosted on Cognee Cloud. The public presentation and browser advisor are static pages; they do not carry API keys or call the private brain. Wise Owl uses deterministic matching against four curated saved records. It does not make live model or Cognee calls. AWS, Strands, Docker Sandboxes, and Bright Data were discussed but are not part of the delivered demo. An ordinary Docker version of Wise Owl is included.
 
-See [the architecture notes](docs/architecture.md), [Focus Owl engine/flow verification](scope-goblin/focus-owl-verification.json), and [latest public navigation verification](scope-goblin/navigation-verification.json). The `scope-goblin/` source folder and public URL remain for compatibility with the original demo.
+See [the architecture notes](docs/architecture.md), [the curated catalog](scope-goblin/lesson.json), and [Wise Owl local verification](scope-goblin/wise-owl-verification.json), and [the published round-trip check](scope-goblin/wise-owl-public-verification.json). The `scope-goblin/` source folder and public URL remain for compatibility with the original demo. `DEVPOST.md` and the earlier verification receipts are retained as historical submission records.
 
 ## Run the presentation and browser demo locally
 
@@ -60,9 +62,9 @@ Python 3 is sufficient; there is no package install or build step.
 python3 -m http.server 4173 --bind 127.0.0.1 --directory presentation
 ```
 
-Open [the presentation](http://127.0.0.1:4173/) or [Focus Owl](http://127.0.0.1:4173/scope-goblin/).
+Open [the presentation](http://127.0.0.1:4173/) or [Wise Owl](http://127.0.0.1:4173/scope-goblin/).
 
-To regenerate the standalone game after editing its source:
+To regenerate the standalone advisor after editing its source:
 
 ```sh
 python3 -B scope-goblin/build-portable.py
@@ -77,9 +79,9 @@ The reusable event content and templates are in [`presentation/content/`](presen
 python3 presentation/scripts/render-event-readouts.py
 ```
 
-The snapshot corresponds to Sites source commit `30d02c230f146afbffc51f5394fdc02568d98242` (v14).
+The snapshot corresponds to Sites source commit `09ad99d5ca24b5cd081b334683b75233942843fa` (v15).
 
-## Run Focus Owl in Docker
+## Run Wise Owl in Docker
 
 ```sh
 cd scope-goblin
@@ -87,21 +89,30 @@ docker build -t looping-lab-scope-goblin:local .
 docker run --rm --name looping-lab-scope-goblin --read-only --cap-drop ALL --security-opt no-new-privileges --memory 64m --cpus 0.5 -p 127.0.0.1:8793:8080 looping-lab-scope-goblin:local
 ```
 
-Open [the container edition](http://127.0.0.1:8793/). The container uses only Python’s standard library, runs as a non-root user, and does not store pitches.
+Open [the container edition](http://127.0.0.1:8793/). The container uses only Python’s standard library, runs as a non-root user, and does not store questions.
 
-## A 30-second demo
+## A one-minute demo
 
-1. Open Focus Owl and choose **Pizza empire**.
-2. Choose **Find my focus**: “Big wings. Small first flight.”
-3. Show the single dinner-picker action, what “done” looks like, and extras parked for later.
-4. Choose **Keep my focus plan** to reveal the source-linked Markdown plan.
-5. Use **Back to presentation** to return to LIVE DEMO, then press Right for the final links. The deck opens the game in the same tab so this round trip works in the in-app browser.
+1. Open Wise Owl: the answer panel starts blank.
+2. Choose **Working together**. The example fills the question without generating an answer.
+3. Choose **Ask Wise Owl**. Inspect the personal account, its limits, reuse conditions, proposed experiment, and source.
+4. Try **Choosing scope**: the saved method has no recorded comparative outcome, and a wider connected test may be the right choice.
+5. Ask about a project or technology absent from the catalog. Wise Owl says it lacks the evidence.
+6. Choose **Keep this decision plan** for a copyable record, or **Back to the presentation** to return to LIVE DEMO.
 
 ## Verification and scope
 
-The original Scope Goblin implementation was checked in a local Docker container and browser, including invalid input and a 390px viewport; its original receipts are retained unchanged. The Focus Owl update passed eight Python/browser parity cases, the pizza-to-focus-plan browser flow, and local container checks. A subsequent public Site v14 check verified the deck → game → presentation round trip, the focus plan, and arrow navigation after return. See `scope-goblin/focus-owl-verification.json` and `scope-goblin/navigation-verification.json`. These are preparer checks, not independent assessment or a demonstrated improvement in future outcomes.
+Run the repeatable advisor check with Python 3 and Node:
 
-This repository is the public submission snapshot: runnable demo code, the public presentation, screenshots, and documentation. It excludes API keys, local credential files, private memory corpora, and private interview transcripts. The historical preparation repository remains private. No video recording is included yet.
+```sh
+python3 -B scope-goblin/verify-wise-owl.py
+```
+
+The current Wise Owl receipt records nine Python/browser parity and routing cases, invalid-input checks, four distinct themes, a blank initial answer, no answer from merely selecting an example, clearing stale advice on edit, an explicit unknown response, a complete copyable decision plan, local Docker checks, and return navigation. See `scope-goblin/wise-owl-verification.json` for the exact verification scope. The published v15 round-trip check separately verified same-tab entry, blank initial output, a qualified collaboration answer, a complete decision plan, return to LIVE DEMO, and arrow navigation afterward; see `scope-goblin/wise-owl-public-verification.json`.
+
+The preceding Scope Goblin and Focus Owl receipts remain unchanged. They describe their historical builds, including the v14 public navigation check; they do not establish current advisor behavior. These checks are preparer verification, not independent assessment or evidence of improved hackathon outcomes.
+
+This repository is the public project snapshot: runnable advisor code, the public presentation, screenshots, and documentation. It excludes API keys, local credential files, private memory corpora, and private interview transcripts. The catalog includes two existing curated methods and two approved public presentation excerpts. No original Walk the Line source was loaded or ingested for this advisor. The historical preparation repository remains private. No video recording is included yet.
 
 ## Credits
 

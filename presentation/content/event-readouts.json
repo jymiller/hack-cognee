@@ -80,9 +80,9 @@
     "chapter": "today",
     "label": "LIVE DEMO",
     "eyebrow": "06 / LIVE DEMO · COGNEE · 21 SEPTEMBER 2026",
-    "title": "We built the Brain. Then Focus Owl.",
-    "lead": "One big idea → a focused next action and check.",
-    "description": "A shared Hackathon Brain and a tiny game built by Participant using a saved method.",
+    "title": "Wise Owl, your hackathon advisor.",
+    "lead": "Past experience → an informed choice → a new experiment.",
+    "description": "Ask what to reuse, what failed, or which rule to deliberately challenge.",
     "status": "Working local Docker demo · public browser edition",
     "cover_cards": [
       [
@@ -99,44 +99,44 @@
       ]
     ],
     "system": {
-      "title": "A remembered method becomes a product choice.",
-      "description": "The saved method requires one actor, one problem, one outcome, and an observable check. It shapes every Focus Owl answer.",
+      "title": "Use the past to decide what to try next.",
+      "description": "Wise Owl starts with your question, then surfaces relevant saved experience. Focus is one theme among several.",
       "steps": [
-        "Enter an oversized pitch",
-        "Apply the saved method",
-        "Return one tiny action",
-        "Check the result"
+        "Ask about a hackathon decision",
+        "Inspect the relevant lesson and its source",
+        "Choose what to reuse—or challenge",
+        "Define an experiment and check the result"
       ],
-      "note": "The game uses deterministic rules and a curated saved lesson. The browser edition runs locally in the viewer’s browser; the original runs in an ordinary Docker container."
+      "note": "The browser prototype uses curated local records and deterministic matching. It distinguishes a saved method, an observation and an untested proposal. It makes no live model or Cognee calls."
     },
     "evidence": {
       "title": "What actually works today.",
-      "description": "Participant built and exercised the game; Participant, Sponsor and Assess Hackathon verified their dedicated Hackathon Brain connection.",
+      "description": "The advisor is built on curated lessons. The broader Codex team uses the dedicated Hackathon Brain.",
       "cards": [
         [
           "Hackathon Brain",
           "The shared foundation and four role definitions are indexed. Each role retrieved its own definition with the dedicated key."
         ],
         [
-          "Focus Owl",
-          "Pizza and pet ideas produce a playful focus response, a topic-specific action, an observable check and a copyable plan."
+          "Wise Owl",
+          "Responses identify the available evidence, its limits, and a proposed next experiment. Missing outcomes remain unknown."
         ],
         [
-          "Observed checks",
-          "Participant checked the local Docker runtime, source provenance, browser interactions and narrow-screen layout."
+          "Verify before claiming",
+          "Check the question, the retrieved lesson and the proposed test. A suggestion is not a measured outcome."
         ]
       ],
-      "note": "These are implementation and preparer checks. Audience feedback and improved future outcomes have not been measured. The game does not make live model or Cognee calls."
+      "note": "The advisor is a browser prototype using saved records. It is not a live search of the full Cognee brain, and no improvement in hackathon outcomes has been measured."
     },
     "demo": {
-      "title": "Play the thing we built.",
-      "description": "Give Focus Owl an overambitious idea and inspect the smaller plan it returns.",
+      "title": "Ask your hackathon advisor.",
+      "description": "Bring a question about a decision, previous experience, or a rule you might want to break.",
       "cards": [
         [
           "Public browser edition",
-          "Same deterministic game, available to anyone with this link.",
+          "Curated lessons, available to anyone with this link.",
           "https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/",
-          "Play Focus Owl ↗"
+          "Ask Wise Owl ↗"
         ],
         [
           "Local Docker edition",
@@ -145,8 +145,9 @@
           "Open local Docker demo ↗"
         ]
       ],
-      "note": "A saved Brain method informs both versions. Neither version sends pitches to a model or writes them into Cognee."
+      "note": "The answer starts with your question. No advice is shown in the result panel before you ask."
     },
-    "custom_cover": "content/today-cover.html"
+    "custom_cover": "content/today-cover.html",
+    "after_cover": "content/wise-owl-brain.html"
   }
 ]

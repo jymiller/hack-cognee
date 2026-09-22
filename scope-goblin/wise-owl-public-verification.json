@@ -1,0 +1,18 @@
+{
+  "app": "Wise Owl \u2014 your hackathon advisor",
+  "checked_at_utc": "2026-09-22T04:08:38.021364+00:00",
+  "status": "public_browser_round_trip_passed",
+  "url": "https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/",
+  "site_version": 15,
+  "site_source_commit": "09ad99d5ca24b5cd081b334683b75233942843fa",
+  "portable_sha256": "4e40f95a7892a61175c90c883c5d1c88ddbed8d757e297c35704e5795f04a3ed",
+  "checks": {
+    "live_demo_link_same_tab": true,
+    "initial_answer_blank": true,
+    "collaboration_question_returns_qualified_reflection": true,
+    "keep_decision_plan_complete": true,
+    "back_to_presentation_today": true,
+    "arrow_right_advances_to_links": true
+  },
+  "limits": "Four curated saved records; deterministic matching. No live model or Cognee query."
+}
