@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-09-22T03:43:55.902395+00:00",
+  "app": "Focus Owl",
+  "parity_cases_passed": 8,
+  "portable_sha256": "810706dea73ddb197da853735c7228596b819a8e6bd360560098411b0a2aa51a",
+  "standalone": true,
+  "browser_check": "Passed: Pizza empire -> Find my focus -> dinner action, done check and parked extras -> Keep my focus plan reveals populated Focus Owl Markdown with source.",
+  "local_container_check": "Passed: health identifies Focus Owl; root serves new page; POST /api/roast returns focus wording, dinner action and parked extras.",
+  "memory_writes": 0,
+  "container_id": "48f957d2fcadd2978ec8382e1d541b789adba3b71cfbf7a10a9f6b3a4a20e54f",
+  "visual_check": "Desktop preview inspected: owl SVG, explicit purpose, focus controls and plan render correctly."
+}

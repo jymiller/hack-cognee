@@ -1,7 +1,7 @@
 /* Browser port of app.py. Curated lesson is supplied by build-portable.py. */
 function browserRoast(raw) {
   const idea = typeof raw === 'string' ? raw.trim() : '';
-  if (idea.length < 5 || idea.length > 600) throw Error('Give the goblin a pitch between 5 and 600 characters.');
+  if (idea.length < 5 || idea.length > 600) throw Error('Give the owl an idea between 5 and 600 characters.');
   const text = idea.toLowerCase();
   const broad = /\b(everyone|everything|world|platform|ecosystem|marketplace|universal|all-in-one)\b/.test(text);
   const extras = [
@@ -33,11 +33,11 @@ function browserRoast(raw) {
   }
   let title, line;
   if (broad || extras.length >= 3) {
-    title = 'Attempted empire building'; line = 'You have ten minutes, not a Series B.';
+    title = 'Choose one target'; line = 'Big wings. Small first flight.';
   } else if (extras.length >= 1) {
-    title = 'Suspicious feature collection'; line = 'Your MVP has packed three suitcases for a day trip.';
+    title = 'Park the distractions'; line = 'Those extra features can wait on another branch.';
   } else {
-    title = 'Mostly house-trained'; line = 'This might fit in ten minutes. Please do not add a marketplace while I blink.';
+    title = 'Ready to focus'; line = 'One clear next step. Give it your full attention.';
   }
   return {
     idea, verdict:title, roast:line, tiny, next_action:action, observable_check:check,

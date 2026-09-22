@@ -1,4 +1,4 @@
-"""A tiny deterministic scope critic. No provider calls or credentials."""
+"""A tiny deterministic focus coach. No provider calls or credentials."""
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import datetime as dt
@@ -39,11 +39,11 @@ def roast(idea):
         check = 'Press the button: the expected example result appears. Label sample data and repeat the check once.'
         tiny = 'One button that does something. A shockingly good start.'
     if broad or len(extras) >= 3:
-        title, line = 'Attempted empire building', 'You have ten minutes, not a Series B.'
+        title, line = 'Choose one target', 'Big wings. Small first flight.'
     elif len(extras) >= 1:
-        title, line = 'Suspicious feature collection', 'Your MVP has packed three suitcases for a day trip.'
+        title, line = 'Park the distractions', 'Those extra features can wait on another branch.'
     else:
-        title, line = 'Mostly house-trained', 'This might fit in ten minutes. Please do not add a marketplace while I blink.'
+        title, line = 'Ready to focus', 'One clear next step. Give it your full attention.'
     return {
         'idea': idea, 'verdict': title, 'roast': line, 'tiny': tiny, 'next_action': action,
         'observable_check': check, 'park_for_later': extras or ['extra features until the first check passes'],
@@ -69,7 +69,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == '/health':
-            self.respond(200, {'ok': True, 'app': 'Scope Goblin', 'mode': 'local deterministic demo'})
+            self.respond(200, {'ok': True, 'app': 'Focus Owl', 'mode': 'local deterministic demo'})
         elif self.path in ('/', '/index.html'):
             self.respond(200, (ROOT / 'index.html').read_bytes(), 'text/html; charset=utf-8')
         else:
@@ -81,14 +81,14 @@ class Handler(BaseHTTPRequestHandler):
         try:
             length = int(self.headers.get('Content-Length', 0))
             if not 0 < length <= 8192:
-                return self.respond(413, {'error': 'That pitch is bigger than the goblin. Keep it under 600 characters.'})
+                return self.respond(413, {'error': 'Start with a short idea: keep it under 600 characters.'})
             payload = json.loads(self.rfile.read(length))
             idea = payload.get('idea') if isinstance(payload, dict) else None
             if not isinstance(idea, str) or not 5 <= len(idea.strip()) <= 600:
-                return self.respond(400, {'error': 'Give the goblin a pitch between 5 and 600 characters.'})
+                return self.respond(400, {'error': 'Give the owl an idea between 5 and 600 characters.'})
             self.respond(200, roast(idea.strip()))
         except (ValueError, UnicodeError):
-            self.respond(400, {'error': 'The goblin needs a valid pitch.'})
+            self.respond(400, {'error': 'The owl needs a valid idea.'})
 
     def log_message(self, format, *args):
         pass  # Do not retain user pitches or requests.
