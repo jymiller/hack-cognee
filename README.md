@@ -6,6 +6,7 @@ The Looping Lab is a human-led hackathon learning system: **ideation → build �
 
 Built for **Battle of the Personal Brains**, September 21, 2026.
 
+- **[Read the hackathon closeout](docs/hackathon-closeout.md)** — submitted, as confirmed by John; delivery status, verification, limitations, and next steps.
 - **[Open the presentation](https://milbird-three-layers-sep26.john821249.chatgpt.site/#story)** — Left/Right advances the story; Down opens the evidence and detail.
 - **[Ask Wise Owl](https://milbird-three-layers-sep26.john821249.chatgpt.site/scope-goblin/)** — your hackathon advisor: know what we tried; choose what to try next.
 - **[Explore Milbird’s hackathon history](https://milbird.com/hackathons/)** — the broader series of projects and experiments.
@@ -14,7 +15,7 @@ Built for **Battle of the Personal Brains**, September 21, 2026.
 
 A shared Cognee brain carries hackathon methods and selected project context into a human-directed team in Codex. John directs the Brain co-pilot. The Participant, Sponsor, Assess Hackathon, and Join New Hackathon roles work with that shared context, each bringing a different perspective. John remains the decision owner.
 
-The presentation has seven horizontal chapters: **Looping Lab → Team → Solution → Walk the Line → Reflection → LIVE DEMO → Links**. The Team shows agent communication around a round table and shared Cognee memory. Solution makes the architecture and human-reviewed memory selection visible. Supporting detail sits below each chapter.
+The presentation has seven horizontal chapters: **Looping Lab → Team → Solution → Walk the Line → Reflection → LIVE DEMO (+System) → Links**. The Team shows agent communication around a round table and shared Cognee memory. Solution makes the architecture and human-reviewed memory selection visible. Supporting detail sits below each chapter. The planned Interviewer is documented below Team and has not been built or launched.
 
 **Wise Owl — your hackathon advisor** is the working artifact built by the Participant. **Know what we tried. Choose what to try next.** It starts with a blank answer panel and a question. After you choose **Ask Wise Owl**, it matches the question to one of four source-qualified saved records, explains what is known, and suggests when to reuse a lesson or challenge a rule with an observable experiment. Editing the question clears the previous answer.
 
@@ -81,7 +82,7 @@ The reusable event content and templates are in [`presentation/content/`](presen
 python3 presentation/scripts/render-event-readouts.py
 ```
 
-The snapshot corresponds to Sites source commit `97ca9401875321c8d8a9b633b4a8eaa3406e5bca` (v18).
+The snapshot corresponds to Sites source commit `9e16e3455ce23a01089f1b0dc19fd9218715e55d` (v20).
 
 ## Run Wise Owl in Docker
 
