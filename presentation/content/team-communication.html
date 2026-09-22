@@ -1,0 +1,121 @@
+<section id="team" class="detail-slide deck-slide team-comms" data-chapter="team" data-page="overview" data-chapter-title="The team" data-title="Agents collaborate. People guide the loop." aria-labelledby="team-title">
+  <div class="team-comms-heading">
+    <p class="eyebrow">LOCAL CODEX TEAM / ONE HACKATHON BRAIN</p>
+    <h2 id="team-title">Agents collaborate. People guide the loop.</h2>
+  </div>
+  <svg class="team-comms-diagram" viewBox="0 0 992 568" role="img" aria-labelledby="team-comms-title team-comms-desc">
+    <title id="team-comms-title">Humans supply direction and evidence. Five agents collaborate around a round table with shared Cognee memory.</title>
+    <desc id="team-comms-desc">John provides goals and reflections; event feedback supplies more context. Orange two-way arrows connect the Brain agent to Participant, Sponsor, Assessment, and Join New Hackathon agents. The portraits represent agent personas. Blue lines connect every role to one shared Cognee Hackathon Brain. Assessment proposes lessons; Brain selects useful lessons with source and uncertainty; John approves what becomes durable memory. This describes a human-reviewed workflow, not automatic ingestion.</desc>
+    <defs>
+      <marker id="team-comms-orange-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto-start-reverse"><path d="M0 0 7 3.5 0 7Z" fill="#c45b23"/></marker>
+      <marker id="team-comms-ink-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#59634d"/></marker>
+      <clipPath id="team-comms-portrait"><circle r="30"/></clipPath>
+    </defs>
+
+    <!-- Every participant has a seat around a genuinely circular table. -->
+    <circle class="team-comms-table-shadow" cx="340" cy="334" r="154"/>
+    <circle class="team-comms-table" cx="340" cy="326" r="154"/>
+    <circle class="team-comms-table-inset" cx="340" cy="326" r="143"/>
+
+    <!-- Blue means recall/shared context; orange means a conversation with Brain. -->
+    <g class="team-comms-memory-lines">
+      <path d="M340 214V270"/>
+      <path d="m161 244 114 59"/>
+      <path d="m519 244-114 59"/>
+      <path d="m228 445 74-63"/>
+      <path d="m452 445-74-63"/>
+    </g>
+    <g class="team-comms-talk-lines" marker-start="url(#team-comms-orange-arrow)" marker-end="url(#team-comms-orange-arrow)">
+      <path d="M310 135Q164 110 134 197"/>
+      <path d="M370 135Q516 110 546 197"/>
+      <path d="M309 142C61 177 80 397 190 446"/>
+      <path d="M371 142C619 177 600 397 490 446"/>
+    </g>
+    <text class="team-comms-arrow-label" x="155" y="122">briefs ↔ supports</text>
+    <text class="team-comms-arrow-label" x="525" y="122">briefs ↔ supports</text>
+
+    <!-- Human authority is above the agent, not conflated with its persona. -->
+    <rect class="team-comms-owner" x="126" y="8" width="428" height="50" rx="25"/>
+    <text class="team-comms-owner-kicker" x="340" y="27">HUMAN INPUT</text>
+    <text class="team-comms-owner-text" x="340" y="46">John’s goals · reflections · event feedback</text>
+    <path class="team-comms-direction" d="M340 62v28" marker-end="url(#team-comms-ink-arrow)"/>
+    <text class="team-comms-direction-label" x="365" y="80">John directs</text>
+
+    <g class="team-comms-person" transform="translate(340 128)">
+      <circle class="team-comms-brain-ring" r="35"/>
+      <image href="assets/brain-thinker.png" x="-30" y="-30" width="60" height="60" preserveAspectRatio="xMidYMid slice" clip-path="url(#team-comms-portrait)"/>
+      <text class="team-comms-role" y="53">Brain agent</text>
+      <text class="team-comms-persona" y="72">Thinker · John’s co-pilot</text>
+    </g>
+    <g class="team-comms-person" transform="translate(130 234)">
+      <circle class="team-comms-seat" r="35"/>
+      <image href="assets/john-miller-headshot.jpg" x="-30" y="-30" width="60" height="60" preserveAspectRatio="xMidYMid slice" clip-path="url(#team-comms-portrait)"/>
+      <text class="team-comms-role" y="54">Participant</text>
+      <text class="team-comms-persona" y="73">AGENT · John persona</text>
+    </g>
+    <g class="team-comms-person" transform="translate(550 234)">
+      <circle class="team-comms-seat" r="35"/>
+      <image href="assets/dave-headshot.jpg" x="-30" y="-30" width="60" height="60" preserveAspectRatio="xMidYMid slice" clip-path="url(#team-comms-portrait)"/>
+      <text class="team-comms-role" y="54">Sponsor</text>
+      <text class="team-comms-persona" y="73">AGENT · Dave persona</text>
+    </g>
+    <g class="team-comms-person" transform="translate(208 468)">
+      <circle class="team-comms-seat" r="35"/>
+      <image href="https://assets.sfstandard.com/image/994911177489/image_ohp1o4e2jh3439ihqqs6u1gt3b/-S3840x5760-FPNG" x="-30" y="-30" width="60" height="60" preserveAspectRatio="xMidYMid slice" clip-path="url(#team-comms-portrait)"/>
+      <text class="team-comms-role" y="54">Assessment</text>
+      <text class="team-comms-persona" y="73">AGENT · Rene persona</text>
+    </g>
+    <g class="team-comms-person" transform="translate(472 468)">
+      <circle class="team-comms-seat" r="35"/>
+      <image href="assets/julian-alberts-headshot.png" x="-30" y="-30" width="60" height="60" preserveAspectRatio="xMidYMid slice" clip-path="url(#team-comms-portrait)"/>
+      <text class="team-comms-role" y="54">Join New Hackathon</text>
+      <text class="team-comms-persona" y="73">AGENT · Julian persona</text>
+    </g>
+
+    <!-- A shared memory hub, distinct from the Brain agent sitting at the table. -->
+    <circle class="team-comms-hub" cx="340" cy="326" r="77"/>
+    <text class="team-comms-memory-kicker" x="340" y="295">COGNEE</text>
+    <text class="team-comms-memory-title" x="340" y="325">Hackathon</text>
+    <text class="team-comms-memory-title" x="340" y="350">Brain</text>
+    <text class="team-comms-memory-note" x="340" y="374">shared memory</text>
+
+    <!-- Separate, legible editorial decision path. This is a workflow, not a new agent. -->
+    <line class="team-comms-divider" x1="668" y1="68" x2="668" y2="516"/>
+    <text class="team-comms-curation-title" x="705" y="104">What is worth</text>
+    <text class="team-comms-curation-title" x="705" y="132">remembering?</text>
+    <g transform="translate(704 163)">
+      <rect class="team-comms-step" width="252" height="69" rx="12"/>
+      <circle class="team-comms-step-dot" cx="23" cy="23" r="5"/>
+      <text class="team-comms-step-title" x="39" y="29">Assessment proposes</text>
+      <text class="team-comms-step-note" x="20" y="51">Lessons from the evidence</text>
+    </g>
+    <path class="team-comms-direction" d="M830 239v20" marker-end="url(#team-comms-ink-arrow)"/>
+    <g transform="translate(704 269)">
+      <rect class="team-comms-step" width="252" height="69" rx="12"/>
+      <circle class="team-comms-step-dot" cx="23" cy="23" r="5"/>
+      <text class="team-comms-step-title" x="39" y="29">Brain curates</text>
+      <text class="team-comms-step-note" x="20" y="51">Useful · sourced · qualified</text>
+    </g>
+    <path class="team-comms-direction" d="M830 345v20" marker-end="url(#team-comms-ink-arrow)"/>
+    <g transform="translate(704 375)">
+      <rect class="team-comms-approval" width="252" height="69" rx="12"/>
+      <path d="m722 400 6 6 10-13" fill="none" stroke="#497442" stroke-width="3" transform="translate(-704 -375)"/>
+      <text class="team-comms-step-title" x="39" y="29">John approves</text>
+      <text class="team-comms-step-note" x="20" y="51">Then add selected memory</text>
+    </g>
+    <text class="team-comms-boundary" x="705" y="478">Human-reviewed workflow.</text>
+    <text class="team-comms-boundary" x="705" y="497">No automatic ingestion.</text>
+  </svg>
+  <nav class="team-comms-event-flow" aria-label="The hackathon learning loop">
+    <a href="#walk-the-line"><small>PAST EXPERIENCE</small><strong>Walk the Line</strong></a>
+    <span aria-hidden="true">learn →</span>
+    <a href="#today" aria-label="This loop: today's Cognee hackathon live demo"><small>THIS LOOP</small><strong>Today · Cognee</strong></a>
+    <span aria-hidden="true">reuse →</span>
+    <a href="#links/next-event"><small>NEXT LOOP</small><strong>Thursday · Build Night</strong></a>
+  </nav>
+  <div class="team-comms-footer">
+    <span><i class="team-comms-key-talk"></i> Conversation <i class="team-comms-key-memory"></i> Shared context</span>
+    <a class="quiet-link" href="#team/roles">Roles &amp; human input ↓</a>
+  </div>
+  <p class="team-comms-credit">Faces represent agent personas. Rene portrait: Morgan Ellis / The Standard. Role details below.</p>
+</section>

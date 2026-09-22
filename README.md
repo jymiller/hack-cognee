@@ -14,7 +14,7 @@ Built for **Battle of the Personal Brains**, September 21, 2026.
 
 A shared Cognee brain carries hackathon methods and selected project context into a human-directed team in Codex. John directs the Brain co-pilot. The Participant, Sponsor, Assess Hackathon, and Join New Hackathon roles work with that shared context, each bringing a different perspective. John remains the decision owner.
 
-The presentation tells the learning loop visually: the lab, the team around a round table, the previous Walk the Line build, reflection, the live demo, and the next event. Details and evidence sit below each chapter.
+The presentation has seven horizontal chapters: **Looping Lab → Team → Solution → Walk the Line → Reflection → LIVE DEMO → Links**. The Team shows agent communication around a round table and shared Cognee memory. Solution makes the architecture and human-reviewed memory selection visible. Supporting detail sits below each chapter.
 
 **Wise Owl — your hackathon advisor** is the working artifact built by the Participant. **Know what we tried. Choose what to try next.** It starts with a blank answer panel and a question. After you choose **Ask Wise Owl**, it matches the question to one of four source-qualified saved records, explains what is known, and suggests when to reuse a lesson or challenge a rule with an observable experiment. Editing the question clears the previous answer.
 
@@ -26,9 +26,11 @@ Captured from the running presentation:
 
 | The learning loop | The agent team |
 | --- | --- |
-| ![The Looping Lab: ideation, build, review](docs/screenshots/looping-lab.png) | ![The team collaborating around a round table](docs/screenshots/agent-round-table.png) |
+| ![The Looping Lab: ideation, build, review](docs/screenshots/looping-lab.png) | ![The agent communication graph and shared Cognee memory](docs/screenshots/agent-round-table.png) |
 | Reflection | Live demo |
 | ![Reflection with Rodin’s The Thinker](docs/screenshots/reflection.png) | ![The live demo slide](docs/screenshots/live-demo.png) |
+
+![The Solution: local team, reviewed memory, and saved advisor catalog](docs/screenshots/solution.png)
 
 ![Promoting the next hackathon](docs/screenshots/next-hackathon.png)
 
@@ -79,7 +81,7 @@ The reusable event content and templates are in [`presentation/content/`](presen
 python3 presentation/scripts/render-event-readouts.py
 ```
 
-The snapshot corresponds to Sites source commit `09ad99d5ca24b5cd081b334683b75233942843fa` (v15).
+The snapshot corresponds to Sites source commit `97ca9401875321c8d8a9b633b4a8eaa3406e5bca` (v18).
 
 ## Run Wise Owl in Docker
 
@@ -116,4 +118,4 @@ This repository is the public project snapshot: runnable advisor code, the publi
 
 ## Credits
 
-Created by John Miller / [Milbird](https://milbird.com/) with a human-directed Codex agent team and Cognee memory. The team illustration is an illustrative scene rather than a transcript of live agent activity. See [visual credits](docs/visual-credits.md) for image provenance and the Rodin photograph’s CC BY-SA 3.0 attribution.
+Created by John Miller / [Milbird](https://milbird.com/) with a human-directed Codex agent team and Cognee memory. The team communication graph illustrates roles and shared context; it is not a live activity monitor. Earlier generated team illustrations are retained as historical assets. See [visual credits](docs/visual-credits.md) for image provenance and the Rodin photograph’s CC BY-SA 3.0 attribution.

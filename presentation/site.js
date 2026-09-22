@@ -113,7 +113,7 @@ fetch('config.json').then(response => {
     let route;
     try { route = decodeURIComponent(hash.replace(/^#/, '')); } catch { return null; }
     if (!route || route === 'main') return [0, 0];
-    const aliases = { 'saturday':'walk-the-line', 'saturday/context':'walk-the-line', 'feeding':'reflection/foundation', 'feeding/prep':'reflection/foundation', 'feeding/session':'today/capture', 'feeding/lifecycle':'reflection/memory', 'problem':'story/context', 'demo':'today/demo', 'demo/evidence':'today/evidence', 'demo-plan':'today/demo', 'architecture':'today/architecture', 'architecture/stack':'today/stack', 'proof':'today/evidence', 'sponsors':'reflection/sponsors', 'sponsor-learning':'reflection/sponsors', 'sponsor-learning/findings':'reflection/sponsor-findings', 'sponsor-learning/method':'reflection/sponsor-method', 'live-demo':'today', 'lessons':'reflection', 'resources':'links', 'today/resources':'links', 'resources/recording':'today/recording' };
+    const aliases = { 'saturday':'walk-the-line', 'saturday/context':'walk-the-line', 'feeding':'reflection/foundation', 'feeding/prep':'reflection/foundation', 'feeding/session':'today/capture', 'feeding/lifecycle':'reflection/memory', 'problem':'story/context', 'demo':'today/demo', 'demo/evidence':'today/evidence', 'demo-plan':'today/demo', 'architecture':'solution/architecture', 'architecture/stack':'solution/stack', 'today/architecture':'solution/architecture', 'today/stack':'solution/stack', 'system':'solution', 'proof':'today/evidence', 'sponsors':'reflection/sponsors', 'sponsor-learning':'reflection/sponsors', 'sponsor-learning/findings':'reflection/sponsor-findings', 'sponsor-learning/method':'reflection/sponsor-method', 'live-demo':'today', 'lessons':'reflection', 'resources':'links', 'today/resources':'links', 'resources/recording':'today/recording' };
     route = aliases[route] || route;
     if (route.startsWith('live-demo/')) route = 'today/' + route.slice(10);
     const [chapterId, pageId, extra] = route.split('/');
@@ -162,7 +162,7 @@ fetch('config.json').then(response => {
     const detail = pageIndex === 0 ? 'Overview' : `Detail ${pageIndex} of ${chapters[chapterIndex].slides.length - 1}`;
     document.getElementById('deck-progress').textContent = `${location} · ${chapters[chapterIndex].title}`;
     document.getElementById('deck-page-label').textContent = `${detail} · Page ${pageIndex + 1} of ${chapters[chapterIndex].slides.length}`;
-    document.title = `${active.dataset.title} — Milbird`;
+    document.title = active.dataset.title === "The Looping Lab" ? "The Looping Lab" : `${active.dataset.title} — The Looping Lab`;
     main.scrollTop = 0;
     main.scrollLeft = 0;
     if (focus) {

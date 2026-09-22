@@ -10,8 +10,14 @@ A hackathon has a beginning, middle, and end: ideate, build, review. The Looping
 - **Coordination:** Brain is the main Codex task and co-pilot. Supporting roles check in for shared context and help.
 - **Memory:** a dedicated Cognee Cloud connection stores selected preparation methods and current project context in one `hackathon-prep` dataset. Separate node sets help organize role-specific observations alongside shared methods.
 - **Roles:** Participant builds; Sponsor investigates attendee needs and useful sponsor involvement; Assess Hackathon extracts candidate lessons from evidence; Join New Hackathon prepares information to promote the next event.
-- **Public artifacts:** the visual deck and Wise Owl browser advisor are static, hosted pages.
+- **Public artifacts:** the seven-chapter visual deck and Wise Owl browser advisor are static, hosted pages. The Solution chapter shows local Codex coordination, reviewed Cognee memory, local files, and the separate saved advisor catalog.
 - **Working demo:** Wise Owl matches a question to one of four curated saved records. It makes no live Cognee or model request and does not search the full project history.
+
+## Selecting durable memory
+
+Assessment and the other roles bring observations, sources, and proposed lessons. Brain selects potentially reusable material while preserving uncertainty. John decides what belongs in durable memory. The selected material can then be indexed in Cognee and recall verified. This is a human-directed workflow, not automatic ingestion or a separate deployed service.
+
+Wise Owl's saved catalog is a separate public artifact containing curated methods and approved public excerpts. A line between Cognee and the Codex team represents shared knowledge; it does not imply that the browser advisor calls Cognee live.
 
 ## From saved record to a decision
 
@@ -28,6 +34,6 @@ A hackathon has a beginning, middle, and end: ideate, build, review. The Looping
 
 A personal account is not a comparative outcome. A saved method does not demonstrate that it improved judging or build speed. An experiment and its hypothesis are proposals. The Walk the Line review's zero video-confirmed marks and 26 photographs are different units, not an accuracy score; the color mismatch remains an investigative lead rather than a proven cause.
 
-The mindmap in the deck is a screenshot of observed Cognee data, not a live graph. Agent personas illustrate roles; the picture is not an execution monitor. Walk the Line supplies approved public presentation examples, while its original source corpus remains held from memory ingestion. Sponsor feedback in the public deck is limited to material approved for publication.
+The mindmap in the deck is a screenshot of observed Cognee data, not a live graph. The Team communication graph uses agent personas and connections to illustrate roles and shared context; it is not an execution monitor. Walk the Line supplies approved public presentation examples, while its original source corpus remains held from memory ingestion. Sponsor feedback in the public deck is limited to material approved for publication.
 
 AWS, Strands, Docker Sandboxes, and Bright Data are not integrated into the delivered advisor. The Docker edition uses an ordinary container. The public browser edition needs no container, server API, or credentials. Earlier Scope Goblin / Focus Owl receipts and `DEVPOST.md` remain historical records of the project's evolution.
