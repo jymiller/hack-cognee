@@ -1,0 +1,15 @@
+{
+  "role": "participant",
+  "event": "Cognee hackathon \u2014 Looping Lab",
+  "event_date": "2026-09-21",
+  "observed_at": "2026-09-22T02:59:02.836354+00:00",
+  "status": "portable_logic_and_browser_checks_passed",
+  "source": "scope-goblin/app.py and browser-engine.js",
+  "parity_cases": 8,
+  "compared": "all response fields except generation timestamp",
+  "portable_sha256": "07e404f394c23cb0989f5f59756a461538bd68bf6b28dcd17480d0286209800d",
+  "standalone": true,
+  "backend_requests": false,
+  "browser_check": "Pizza preset -> funny verdict -> dinner action/check -> Keep my tiny plan reveals complete copyable Markdown with source and role/event/status metadata. Observed in Codex at http://127.0.0.1:8794.",
+  "feature_scope": "Existing toy behavior preserved; no chomp animation or additional features added."
+}

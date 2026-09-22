@@ -1,0 +1,80 @@
+{
+  "role": "participant",
+  "event": "Cognee hackathon \u2014 Looping Lab",
+  "event_date": "2026-09-21",
+  "observed_at": "2026-09-22T02:55:01.932215+00:00",
+  "status": "local_container_and_browser_checks_passed",
+  "source": "Scope Goblin local container at http://127.0.0.1:8793",
+  "checks": [
+    {
+      "check": "container_http_health",
+      "status": "pass"
+    },
+    {
+      "check": "pizza_has_specific_action_check_source",
+      "status": "pass",
+      "verdict": "Attempted empire building"
+    },
+    {
+      "check": "pet_has_specific_action_check_source",
+      "status": "pass",
+      "verdict": "Attempted empire building"
+    },
+    {
+      "check": "tasks_has_specific_action_check_source",
+      "status": "pass",
+      "verdict": "Mostly house-trained"
+    },
+    {
+      "check": "reject_empty",
+      "status": "pass",
+      "http_status": 400
+    },
+    {
+      "check": "reject_wrong_type",
+      "status": "pass",
+      "http_status": 400
+    },
+    {
+      "check": "reject_too_long",
+      "status": "pass",
+      "http_status": 400
+    },
+    {
+      "check": "lesson_matches_local_source_and_saved_recall",
+      "status": "pass"
+    },
+    {
+      "check": "browser_pizza_and_hamster_flows",
+      "status": "pass",
+      "observed": "Roast, topic-specific action, observable check and source explanation displayed."
+    },
+    {
+      "check": "copyable_plan",
+      "status": "pass",
+      "observed": "Keep my tiny plan revealed a selected read-only text area with idea, verdict, action, check, source and candidate metadata."
+    },
+    {
+      "check": "390px_viewport_bounds",
+      "status": "pass",
+      "observed": {
+        "viewport": 390,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "panel_width": 354
+      }
+    }
+  ],
+  "scope": "Preparer verification; independent assessment and audience feedback pending. Ordinary Docker, saved local method, deterministic rules. No live model/memory call.",
+  "files": {
+    "app.py": "49f7b825d10052c441498355377d3b1cb75448aaf2b8cc33ff467a53247a098c",
+    "index.html": "a62ea0ff1b93c4e619095d08b98ed459d0e2670db423430341de8c4fba4cf459",
+    "lesson.json": "e5f6f7a52696cd14226626b5aead16de5a71e5e94dd8764551837972e81bfa46",
+    "Dockerfile": "f5cb1946cec110816fe767135e56b8625c08f0539510c21903ccc0c09f9b28f3"
+  },
+  "container_id": "3322c9432a403fcb5e6ff8085cc6aa92932054293a06bc898051b6ceba26d35e",
+  "memory_writes": 0,
+  "initial_http_checks_at": "2026-09-22T02:52:52.779341+00:00",
+  "build_started_at": "2026-09-22T02:49:37+00:00",
+  "implementation_note": "The initial browser-download event could not be verified in Codex. The final feature reveals a copyable plan in-page and was verified through the visible textarea."
+}

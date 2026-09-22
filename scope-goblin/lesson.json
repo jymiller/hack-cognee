@@ -1,0 +1,9 @@
+{
+  "title": "Build the smallest useful slice",
+  "source": "brain/hackathon-prep/increments/05-looping-lab-prep-dispatch.md — Source-backed methods",
+  "source_date": "2026-09-21",
+  "excerpt": "Build the smallest runnable slice. For every increment: implement → independent observable check → save receipt → repeat, recover or cut.",
+  "context": "Lock one actor/problem/outcome, one scored sentence, one visible moment and the minimum qualifying artifact.",
+  "provenance": "Curated local method also present in saved prep/cognee-ready/memory/build_eval_plan.json from hackathon-prep. This app reads a saved excerpt; it does not perform live Cognee retrieval.",
+  "status": "source-backed operating method; not proof of improved outcomes or official event rules"
+}

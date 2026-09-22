@@ -1,0 +1,29 @@
+Use case: compositing
+Asset type: landscape 16:9 presentation illustration.
+Primary request: Edit the supplied five-character collaboration scene so everyone is seated around ONE clearly ROUND TABLE as equal peers. The user says, "Always a round table." Change the physical table and seating composition; preserve the five established character identities, all role labels and all exact speech-bubble dialogue.
+
+Input: The supplied image is the edit target and identity/style reference for all five teammates.
+
+Composition: Use an elevated three-quarter camera angle looking down enough to clearly reveal ONE circular wooden tabletop, naturally elliptical in perspective, with an uninterrupted curved rim all the way around. The table is genuinely a circle seen obliquely, with a generous visible central shared surface and a simple central pedestal. Arrange the five teammates AROUND its circumference in a visibly circular conversational group, occupying near-left, far-left, far-center, far-right and near-right positions. John sits in the near-left quadrant, Brain sits far-left, Dave far-center, Rene far-right, Julian near-right. Their chairs and bodies point toward the center and toward one another, their heads turn in natural friendly conversation so every face stays recognizable in a readable three-quarter view. The two near-side teammates should occupy distinctly lower and closer parts of the frame than the three far-side teammates. The result must look like a round-table discussion, never a flat row of five people behind a long desk. Leave breathing room for five well-separated speech bubbles and five associated role labels.
+
+Table and props: One continuous perfectly circular warm wood tabletop, its full shape evident. No seams, joined segments, rectangular extensions, straight side edges, banquet table, horseshoe-shaped table or multiple tables. Shared open idea notebook toward the center and modest laptops, mugs, books, pens and sticky notes naturally arranged around the circle. Props must not obscure faces. No privileged head position.
+
+Character invariants: Exactly the same FIVE little 3D caricature teammates from the input. John: white hair, white beard, multicolor plaid shirt, smiling. Brain: curly-haired bronze Thinker-like statue wearing bronze suit, thoughtful chin resting on hand, patinated bronze material. Dave: tight grey curls, clean-shaven, black casual jacket. Rene: dark cap, long dark hair, dark beard, navy hoodie. Julian: voluminous dark-brown curly hair, youthful long clean-shaven face, dark blazer and white collared shirt. Preserve their individual likenesses closely and their equal scale and importance.
+
+Text (verbatim):
+John's speech bubble: "Let’s build something."
+John's nearby role label: "John · Participant"
+Brain's speech bubble: "What have we learned?"
+Brain's nearby role label: "Brain · Co-pilot"
+Dave's speech bubble: "What do builders need?"
+Dave's nearby role label: "Dave · Sponsor"
+Rene's speech bubble: "Here’s what worked."
+Rene's nearby role label: "Rene · Assessment"
+Julian's speech bubble: "Come build with us."
+Julian's nearby role label: "Julian · Next Hackathon"
+
+Place each role label clearly next to its character in the cream space; labels can wrap to two lines. Each person's own bubble must point clearly to that person. Distribute bubbles around the composition rather than forcing them into a row. Keep all text large and readable. Dialogue is illustrative.
+
+Style and lighting: Preserve the input's warm playful high-quality 3D editorial caricature illustration, big expressive detailed faces and little bodies, tactile fabric and realistic bronze texture, softly lit cream studio background, warm wood, restrained orange/olive/blue accents and matching hand-lettered black typography. Keep the comfortable collaborative mood.
+
+Constraints: Exactly five people, all five faces visible. One circular table only. Round-table conversation is the key requested correction. All ten requested text items must be present and correctly associated. No extra people, duplicated characters, missing person, hidden face, title, logo, watermark or new content. No character lined up behind a straight desk. Keep wide 16:9 framing.
