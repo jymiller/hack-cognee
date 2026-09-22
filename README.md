@@ -52,7 +52,7 @@ The project’s Cognee dataset is `hackathon-prep`, in the `hackathon machine` w
 
 The agents run in local Codex tasks. Cognee memory is hosted on Cognee Cloud. The public presentation and browser advisor are static pages; they do not carry API keys or call the private brain. Wise Owl uses deterministic matching against four curated saved records. It does not make live model or Cognee calls. AWS, Strands, Docker Sandboxes, and Bright Data were discussed but are not part of the delivered demo. An ordinary Docker version of Wise Owl is included.
 
-See [the architecture notes](docs/architecture.md), [the curated catalog](scope-goblin/lesson.json), and [Wise Owl local verification](scope-goblin/wise-owl-verification.json), and [the published round-trip check](scope-goblin/wise-owl-public-verification.json). The `scope-goblin/` source folder and public URL remain for compatibility with the original demo. `DEVPOST.md` and the earlier verification receipts are retained as historical submission records.
+See [the architecture notes](docs/architecture.md), [the curated catalog](scope-goblin/lesson.json), [Wise Owl local verification](scope-goblin/wise-owl-verification.json), and [the published round-trip check](scope-goblin/wise-owl-public-verification.json). The `scope-goblin/` source folder and public URL remain for compatibility with the original demo. `DEVPOST.md` and the earlier verification receipts are retained as historical submission records.
 
 ## Run the presentation and browser demo locally
 
